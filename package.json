@@ -1,0 +1,121 @@
+{
+  "name": "apollo-typegraphql-store",
+  "version": "0.1.0",
+  "private": true,
+  "author": "",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint .",
+    "analyze": "react-scripts analyze",
+    "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@strv/react-scripts": "^2.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "sanitize.css": "^8.0.0",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@strv/eslint-config-javascript": "^9.1.1",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.15",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.4",
+    "@types/webpack-env": "^1.13.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.1",
+    "typescript": "^3.2.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "stylelint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "stylelint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@strv/javascript/environments/react/v16",
+      "prettier",
+      "prettier/react"
+    ],
+    "root": true,
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-styled-components"
+    ],
+    "rules": {}
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "homepage": "/"
+}
