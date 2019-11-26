@@ -1,5 +1,7 @@
 # apollo-typegraphql-store
 
+Local persistent state management with Apollo and TypeGraphQL
+
 ## Getting started
 
 ## Development
@@ -35,4 +37,3 @@ yarn build apollo-typegraphql-store
 ### ESLint
 
 ### Git hooks
-

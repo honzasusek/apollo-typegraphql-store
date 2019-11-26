@@ -1,8 +1,7 @@
 {
-  "presets": [
-    "@strv/react-scripts/babel"
-  ],
+  "presets": ["@strv/react-scripts/babel"],
   "plugins": [
-    "babel-plugin-styled-components"
+    "babel-plugin-styled-components",
+    "babel-plugin-transform-typescript-metadata"
   ]
 }
